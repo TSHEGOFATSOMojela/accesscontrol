@@ -3,7 +3,7 @@
     "host": "localhost",
     "port":27017,
     "url": "mongodb://localhost/tshwanedb",
-    "database": "tshwanedb",
+    "database": "topsecurity",
     "password": "admin",
     "name": "tshwaneDatasource",
     "user": "admin",

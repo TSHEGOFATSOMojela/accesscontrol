@@ -220,6 +220,7 @@ module.exports = function(Visitor) {
         'mobileno': visitor.mobileno,
         'image': visitor.image,
         'AccesscontroluserId': visitor.AccesscontroluserId,
+        
       }, function(err, visitor) {
         if (err)
           console.log(err);
