@@ -1,0 +1,37 @@
+{
+  "name": "InquiryType",
+  "plural": "InquiryTypes",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "mixins": {
+    "Counts": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "status": {
+      "type": "number",
+      "required": true,
+      "default": 1
+    }
+  },
+  "validations": [],
+  "relations": {
+    "enquiries": {
+      "type": "hasMany",
+      "model": "Enquiry",
+      "foreignKey": "id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

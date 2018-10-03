@@ -1,0 +1,37 @@
+{
+  "name": "Channel",
+  "plural": "Channels",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "mixins": {
+    "Counts": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "datecaptured": {
+      "type": "date",
+      "required": true,
+      "defaultFn": "now"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "incidents": {
+      "type": "hasMany",
+      "model": "Incident",
+      "foreignKey": "channel"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

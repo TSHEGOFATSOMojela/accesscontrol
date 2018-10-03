@@ -1,0 +1,30 @@
+{
+  "name": "VistorIDType",
+  "plural": "VisitorIDTypes",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "mixins": {
+    "Counts": true
+  },
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "visitors": {
+      "type": "hasMany",
+      "model": "Visitor",
+      "foreignKey": "idtype"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

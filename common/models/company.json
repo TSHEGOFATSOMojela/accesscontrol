@@ -1,0 +1,57 @@
+{
+  "name": "company",
+  "plural": "companies",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "mixins": {
+    "Counts": true
+  },
+  "properties": {
+    "companyId": {
+      "type": "number",
+      "id": true,
+      "generated": true,
+      "required": false,
+      "doc": "This is the primary ID used to identify a company"
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "address": {
+      "type": "string",
+      "required": true
+    },
+    "telephone": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "string",
+      "required": true
+    },
+    "status": {
+      "type": "number",
+      "required": true,
+      "default": "1"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "visitors": {
+      "type": "hasMany",
+      "model": "Visitor",
+      "foreignKey": "company"
+    },
+    "Accesscontrolusers": {
+      "type": "hasMany",
+      "model": "Accesscontroluser",
+      "foreignKey": "id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

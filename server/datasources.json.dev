@@ -1,0 +1,30 @@
+{
+  "tshwaneDatasource": {
+    "host": "localhost",
+    "port":27017,
+    "url": "mongodb://localhost/tshwanedb",
+    "database": "tshwanedb",
+    "password": "admin",
+    "name": "tshwaneDatasource",
+    "user": "admin",
+    "connector": "mongodb"
+  },
+  "tshwaneEmailDataSource": {
+    "name": "tshwaneEmailDataSource",
+    "connector": "mail",
+    "transports": [
+      {
+        "type": "smtp",
+        "host": "smtp.mailgun.org",
+        "port": 25,
+        "tls": {
+          "rejectUnauthorized": false
+        },
+        "auth": {
+          "user": "support@tshwanesafety.co.za",
+          "pass": "Tsheko1"
+        }
+      }
+    ]
+  }
+}

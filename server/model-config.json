@@ -1,0 +1,109 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../node_modules/loopback-counts-mixin",
+      "../node_modules/loopback-stats-mixin/dist",
+      "../node_modules/loopback-ds-timestamp-mixin",
+      "../common/mixins",
+      "../node_modules/loopback-reset-password-mixin",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "db",
+    "public": false
+  },
+  "AccessToken": {
+    "dataSource": "db",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "db",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "db",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "db",
+    "public": false
+  },
+  "Visitor": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Category": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Channel": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Notification": {
+    "dataSource": "db",
+    "public": true
+  },
+  "company": {
+    "dataSource": "db",
+    "public": true
+  },
+  "VisitorStatus": {
+    "dataSource": "db",
+    "public": true
+  },
+  "VehicleType": {
+    "dataSource": "db",
+    "public": true
+  },
+  "VisitorType": {
+    "dataSource": "db",
+    "public": true
+  },
+  "InquiryType": {
+    "dataSource": "db",
+    "public": true
+  },
+  "VisitorImages": {
+    "dataSource": "db",
+    "public": false
+  },
+  "Accesscontroluser": {
+    "dataSource": "db",
+    "public": true
+  },
+  "UserGroup": {
+    "dataSource": "db",
+    "public": true,
+    "options": {
+      "emailVerificationRequired": true
+    }
+  },
+  "Counters": {
+    "dataSource": "db",
+    "public": true
+  },
+  "history": {
+    "dataSource": "db",
+    "public": true
+  },
+  "VistorIDType": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Email": {
+    "dataSource": "EmailDataSource"
+  }
+}

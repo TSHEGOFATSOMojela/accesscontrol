@@ -1,0 +1,12 @@
+{
+  "loopback-component-explorer": {
+    "mountPath": "/api"
+  },
+  "loopback-component-roles": {
+    "userModel": "MyUser",
+    "aclModel": "MyACL",
+    "roleModel": "MyRole",
+    "roleMappingModel": "MyRoleMapping",
+    "adminEmail": "admin@mon-domaine.fr"
+  }
+}

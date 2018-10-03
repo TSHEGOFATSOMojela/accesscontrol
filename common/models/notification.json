@@ -1,0 +1,55 @@
+{
+  "name": "Notification",
+  "plural": "Notifications",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "message": {
+      "type": "string",
+      "required": true
+    },
+    "suburb": {
+      "type": "string",
+      "required": false
+    },
+    "sentBy": {
+      "type": "string",
+      "required": false
+    },
+    "image": {
+      "type": "string",
+      "required": true
+    },
+    "is_sent": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "datecaptured": {
+      "type": "date",
+      "required": true,
+      "defaultFn": "now"
+    },
+    "capturedBy": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "notification_suburb": {
+      "type": "belongsTo",
+      "model": "Suburb",
+      "foreignKey": "suburb"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

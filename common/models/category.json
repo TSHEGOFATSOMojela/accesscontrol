@@ -1,0 +1,52 @@
+{
+  "name": "Category",
+  "plural": "Categories",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "mixins": {
+    "Counts": true
+  },
+  "properties": {
+    "categoryId": {
+      "type": "string",
+      "id": true,
+      "generated": true,
+      "required": false,
+      "doc": "This is the primary ID used to identify a category"
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "datecaptured": {
+      "type": "date",
+      "required": true,
+      "defaultFn": "now"
+    },
+    "categoryimage": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "subCategories": {
+      "type": "hasMany",
+      "model": "visitorStatus",
+      "foreignKey": "categoryId"
+    },
+    "visitors": {
+      "type": "hasMany",
+      "model": "Visitor",
+      "foreignKey": "category"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

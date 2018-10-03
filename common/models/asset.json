@@ -1,0 +1,46 @@
+{
+  "name": "Asset",
+  "plural": "Assets",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "assetId": {
+      "type": "number",
+      "id": true,
+      "generated": true,
+      "required": false,
+      "doc": "This is the primary ID used to identify a Asset"
+    },
+    "regNumber": {
+      "type": "string",
+      "required": true
+    },
+    "vehicleTypeId": {
+      "type": "string",
+      "required": true
+    },
+    "companyId": {
+      "type": "number",
+      "required": true
+    },
+    "status": {
+      "type": "string",
+      "required": true
+    },
+    "datecaptured": {
+      "type": "date",
+      "required": true,
+      "defaultFn": "now"
+    },
+    "callSign": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

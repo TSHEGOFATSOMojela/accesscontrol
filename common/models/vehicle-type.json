@@ -1,0 +1,30 @@
+{
+  "name": "VehicleType",
+  "plural": "VehicleTypes",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "vehicleTypeId": {
+      "type": "number",
+      "id": true,
+      "generated": true,
+      "required": false,
+      "doc": "This is the primary ID used to vehicle type id"
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

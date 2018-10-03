@@ -1,0 +1,75 @@
+{
+  "name": "history",
+  "plural": "histories",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "refNumber": {
+      "type": "string",
+      "required": true
+    },
+    "status": {
+      "type": "string",
+      "required": true
+    },
+    "notes": {
+      "type": "string"
+    },
+    "dateCaptured": {
+      "type": "date",
+      "required": true,
+      "defaultFn": "now"
+    },
+    "capturedBy": {
+      "type": "string",
+      "required": true
+    },
+    "responseTime": {
+      "type": "string"
+    },
+    "departmentHandedover": {
+      "type": "string"
+    },
+    "assignedcompany": {
+      "type": "string"
+    },
+    "escalatedTo": {
+      "type": "string"
+    },
+    "respondingVehicle": {
+      "type": "string"
+    },
+    "respondingOfficer": {
+      "type": "string"
+    },
+    "accidentTime": {
+      "type": "string"
+    },
+    "arNumber": {
+      "type": "string"
+    },
+    "vehicleRegNumber": {
+      "type": "string"
+    },
+    "noOfPeopleInvolved": {
+      "type": "string"
+    },
+    "supervisor": {
+      "type": "string"
+    },
+    "incidentId": {
+      "type": "string"
+    },
+    "reportedOn": {
+      "type": "date",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

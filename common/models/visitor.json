@@ -1,0 +1,130 @@
+{
+  "name": "Visitor",
+  "plural": "Visitors",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "forceId": false,
+  "properties": {
+    "category": {
+      "type": "string"
+    },
+    "visitorStatus": {
+      "type": "string",
+      "required": true,
+      "default": "593c39de022c4aca8604e150"
+    },
+    "company": {
+      "type": "string",
+      "required": true
+    },
+    "typeofvisitor": {
+      "type": "string"
+    },
+    "host": {
+      "type": "string",
+      "required": true
+    },
+    "datecheckedin": {
+      "type": "date",
+      "required": true,
+      "defaultFn": "now"
+    },
+    "reportedBy": {
+      "type": "string",
+      "required": true
+    },
+    "idtype": {
+      "type": "string",
+      "required": true
+    },
+    "datesignedin": {
+      "type": "date"
+    },
+    "datesignedout": {
+      "type": "date"
+    },
+    "laptopserialnumber": {
+      "type": "string"
+    },
+    "carReg": {
+      "type": "string"
+    },
+    "carColor": {
+      "type": "string"
+    },
+    "carVin": {
+      "type": "string"
+    },
+    "carMake": {
+      "type": "string"
+    },
+    "carModel": {
+      "type": "string"
+    },
+    "expirydate": {
+      "type": "date",
+      "required": false
+    },
+    "floorid": {
+      "type": "string"
+    },
+    "deviceId": {
+      "type": "string"
+    },
+    "mobileno": {
+      "type": "string"
+    },
+    "image": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "Visitor_Type": {
+      "type": "belongsTo",
+      "model": "VisitorType",
+      "foreignKey": "typeofvisitor"
+    },
+    "Visitor_channel": {
+      "type": "belongsTo",
+      "model": "Channel",
+      "foreignKey": "channel"
+    },
+    "Visitor_category": {
+      "type": "belongsTo",
+      "model": "Category",
+      "foreignKey": "category"
+    },
+    "Visitor_VisitorStatus": {
+      "type": "belongsTo",
+      "model": "VisitorStatus",
+      "foreignKey": "visitorStatus"
+    },
+    "visitor_company": {
+      "type": "belongsTo",
+      "model": "company",
+      "foreignKey": "company"
+    },
+    "Accesscontroluser": {
+      "type": "belongsTo",
+      "model": "Accesscontroluser",
+      "foreignKey": ""
+    },
+    "visitoridentity_type": {
+      "type": "belongsTo",
+      "model": "visitoridentitytype",
+      "foreignKey": "idtype"
+    },
+    "parking_floor": {
+      "type": "belongsTo",
+      "model": "floor",
+      "foreignKey": "floorid"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

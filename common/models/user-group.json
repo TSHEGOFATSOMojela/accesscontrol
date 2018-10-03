@@ -1,0 +1,28 @@
+{
+  "name": "UserGroup",
+  "plural": "UserGroups",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "Accesscontrolusers": {
+      "type": "hasMany",
+      "model": "Accesscontroluser",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

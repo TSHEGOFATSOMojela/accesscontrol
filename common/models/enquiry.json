@@ -1,0 +1,56 @@
+{
+  "name": "Enquiry",
+  "plural": "Enquiries",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "enquiryId": {
+      "type": "number",
+      "id": true,
+      "generated": true,
+      "required": false,
+      "doc": "This is the primary ID used to identify a Enquiry"
+    },
+    "fullNames": {
+      "type": "string",
+      "required": true
+    },
+    "address": {
+      "type": "string",
+      "required": true
+    },
+    "contactNumber": {
+      "type": "number",
+      "required": true
+    },
+    "notes": {
+      "type": "string"
+    },
+    "datecaptured": {
+      "type": "date",
+      "required": true,
+      "defaultFn": "now"
+    },
+    "type": {
+      "type": "string",
+      "required": true
+    },
+    "capturedBy": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "enquiry_type": {
+      "type": "belongsTo",
+      "model": "InquiryType",
+      "foreignKey": "type"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

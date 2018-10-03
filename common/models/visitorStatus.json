@@ -1,0 +1,40 @@
+{
+  "name": "VisitorStatus",
+  "plural": "VisitorStatuses",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "mixins": {
+    "Counts": true
+  },
+  "properties": {
+    "visitorStatusId": {
+      "type": "string",
+      "id": true,
+      "generated": true,
+      "required": false,
+      "doc": "This is the primary ID used to sub category id"
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "datecaptured": {
+      "type": "date",
+      "required": true,
+      "defaultFn": "now"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "visitors": {
+      "type": "hasMany",
+      "model": "Visitor",
+      "foreignKey": "visitorStatus"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

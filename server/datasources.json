@@ -1,0 +1,28 @@
+{
+  "db": {
+    "host": "localhost",
+    "port":27017,
+    "url": "",
+    "database": "topsecurity",
+    "password": "",
+    "name": "tshwaneDatasource",
+    "user": "",
+    "connector": "mongodb"
+  },
+  "EmailDataSource": {
+    "name": "mail",
+    "connector": "mail",
+    "transports": [
+      {
+        "type": "SMTP",
+        "host": "smtp.gmail.com",
+        "secure": true,
+        "port": 465,
+        "auth": {
+          "user": "tsheko.mashego@gmail.com",
+          "pass": "mashego1"
+        }
+      }
+    ]
+  }
+}
